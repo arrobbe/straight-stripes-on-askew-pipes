@@ -1,0 +1,12 @@
+Dieser Beitrag stellt ein Python-Skript vor mit dem abhängig von Neigung und Radius eines Rohres eine Form erstellt werden kann die beim Anlegen an das Rohr einen gerade Streifen darstellt.
+
+Dazu muss zunächst berechnet werden welchem Verlauf die Vorlage folgen muss. Einige geometrische Überlegungen führen zu der folgenden Gleichung für die Höhe des Rohres in dessen zylindrischen Bezugssystem.
+
+z(φ) = r ⁢tan(α) ⁢· (1−cos(φ))
+
+Mit Umwandlung von φ kann sehr leicht ein 2D-Plot erstellt werden der zwei dieser Funktionen übereinander zeichnet. Der Abstand entspricht dann der Höhe des Streifens.
+
+
+Dies kann beispielsweise für Rennstreifen am Fahrradrahmen genutzt werden, zumindest solange die Rohre rund sind. Ich habe die notwendigen Parameter für mein Sattelrohr (Außendurchmesser 31,8 mm, Neigung 72,5° - beides Standardgrößen) eingegeben und die Schablone ausgedruckt. Anschließend den Umriss auf Designfolie aus dem Baumarkt (selbstklebend, uni weiß) gezeichnet und ausgeschnitten. Vorsichtig aufgebracht kann es wie oben aussehen.
+
+Folgend findet sich der Quellcode für OpenSCAD (3D-Druck) und Python.
