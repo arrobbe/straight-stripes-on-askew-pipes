@@ -1,0 +1,22 @@
+$fn=300;
+
+r=31.8/2;
+a=43;
+h=20;
+
+res=0.1;
+pi=3.14159;
+
+phimax=(360+50);
+u=2*pi*r;
+
+function f(x)=r*tan(a)*(1-cos(x));
+
+points2=[ for(i=[phimax:-res:0-res]) [i/360*u,f(i)] ];
+points1=[ for(i=[0:res:phimax+res]) [i/360*u,f(i)+h] ];
+
+echo(points1);
+points=concat(points2, points1);
+
+
+linear_extrude(height=1) polygon(points);
